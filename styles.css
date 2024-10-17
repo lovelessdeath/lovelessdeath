@@ -11,6 +11,9 @@ body {
     color: #333;
     line-height: 1.6;
     position: relative;
+    min-height: 100vh; /* Ensures body takes at least full viewport height */
+    display: flex;
+    flex-direction: column;
 }
 
 /* Navigation Bar */
@@ -38,21 +41,41 @@ nav {
     font-weight: bold;
 }
 
+/* Navigation Links */
 .nav-links {
     list-style: none;
     display: flex;
     align-items: center;
+    position: relative; /* For positioning the line effect */
 }
 
 .nav-links li {
-    margin: 0 10px;
-    position: relative;
+    margin: 0 15px;
+    position: relative; /* Allows for absolute positioning of the line */
 }
 
 .nav-links a {
-    color: white;
+    color: #004a8f; /* Dark blue text color */
     text-decoration: none;
     padding: 10px;
+    position: relative;
+    overflow: hidden; /* Prevents line overflow */
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -5px; /* Position the line below the text */
+    width: 0;
+    height: 2px;
+    background-color: #004a8f; /* Dark blue line color */
+    transition: width 0.3s ease, left 0.3s ease; /* Smooth transition */
+}
+
+.nav-links a:hover::after {
+    width: 100%; /* Expands to full width */
+    left: 0; /* Aligns with the text */
 }
 
 .nav-links .dropdown {
@@ -103,6 +126,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 50px;
+    flex-grow: 1; /* Allows the header to grow and fill the space */
 }
 
 .main-title {
@@ -152,7 +176,7 @@ nav {
     position: absolute;
     top: 50%;
     left: 0;
-    font-size: 4rem;
+    font-size: 10rem; /* Larger size for better visibility */
     color: rgba(135, 206, 235, 0.2); /* Sky blue faded color */
     transform: rotate(-90deg);
     transform-origin: 0 0;
@@ -164,17 +188,18 @@ nav {
 
 /* Footer */
 footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
     background-color: #87CEEB; /* Sky blue footer */
     color: white;
-    padding: 20px 0;
     text-align: center;
+    padding: 20px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-size: 1rem;
 }
 
 footer p {
     margin: 0;
-    font-size: 1rem;
-    color: #87CEEB;
+    color: white;
 }
