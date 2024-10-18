@@ -1,0 +1,175 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff; /* White background */
+    color: #333;
+    line-height: 1.6;
+    position: relative;
+    min-height: 100vh; /* Ensures body takes at least full viewport height */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #87CEEB; /* Sky blue background */
+    padding: 10px 20px;
+    color: white;
+    position: sticky; /* Keeps the navigation bar at the top */
+    top: 0; /* Stick to top */
+    z-index: 1000; /* Ensures it stays above other content */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.company-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Georgia', serif; /* Change font */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-links li {
+    margin: 0 15px;
+    position: relative; /* Allows for absolute positioning of the line */
+}
+
+.nav-links a {
+    color: #004a8f; /* Dark blue text color */
+    text-decoration: none;
+    padding: 10px;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: #87CEEB; /* Sky blue background */
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000; /* Ensure it appears above other content */
+}
+
+.dropdown-link {
+    color: #004a8f; /* Dark blue text color */
+    text-decoration: none;
+}
+
+.dropdown-link:hover {
+    color: #007BFF; /* Light blue on hover */
+}
+
+/* Homepage Header */
+.homepage-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    background-color: #87CEEB; /* Light sky blue */
+    position: relative;
+}
+
+.main-title {
+    max-width: 600px;
+}
+
+.main-title h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.main-title .sub-title {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.know-more-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #004a8f; /* Button color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Image */
+.homepage-image img {
+    max-width: 300px;
+}
+
+.homepage-image p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Vertically Faded Text */
+.vertical-text {
+    position: absolute;
+    top: 15%; /* Adjust vertical position */
+    left: 0;
+    font-size: 5rem;
+    color: rgba(0, 74, 143, 0.1); /* Light faded blue */
+    writing-mode: vertical-rl;
+    transform: translateX(-50%);
+}
+
+/* Footer */
+footer {
+    background-color: #87CEEB; /* Sky blue footer */
+    text-align: center;
+    padding: 10px;
+}
+
+/* Products Page */
+.products-container {
+    padding: 20px;
+}
+
+/* Product Style */
+.product {
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.product h2 {
+    font-size: 1.8rem;
+}
+
+/* Transition Effects */
+.dropdown {
+    transition: max-height 0.3s ease; /* Smooth dropdown animation */
+}
+
+/* Hover Effects */
+.products-link:hover {
+    color: #004a8f; /* Change color on hover */
+    text-decoration: underline; /* Add underline on hover */
+}

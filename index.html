@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinnacle Pumps - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo-container">
+            <a href="index.html"><img src="logo-placeholder.png" alt="Company Logo" class="nav-logo"> <!-- Replaceable logo --></a>
+            <a href="index.html" class="company-name">Pinnacle Pumps</a>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="#" class="products-link" onclick="toggleDropdown(event)">Products</a>
+                <ul class="dropdown">
+                    <li><a href="products.html" class="dropdown-link">Product 1</a></li>
+                    <li><a href="products.html" class="dropdown-link">Product 2</a></li>
+                    <li><a href="products.html" class="dropdown-link">Product 3</a></li>
+                    <li><a href="products.html" class="dropdown-link">Product 4</a></li>
+                    <li><a href="products.html" class="dropdown-link">Product 5</a></li>
+                    <li><a href="products.html" class="dropdown-link">Product 6</a></li>
+                    <li><a href="products.html" class="dropdown-link">Product 7</a></li>
+                    <li><a href="products.html" class="dropdown-link">Product 8</a></li>
+                </ul>
+            </li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Homepage Content -->
+    <header class="homepage-header">
+        <div class="main-title">
+            <h1>Totally Top Notch and Sustainable Pumping Solutions</h1>
+            <p class="sub-title">High-performance water pumps for every need, built to last and crafted with care.</p>
+            <a href="about-us.html" class="know-more-btn">Know More &rarr;</a>
+        </div>
+        <div class="homepage-image">
+            <img src="sample-pump-image.png" alt="Pump Image"> <!-- Replaceable Image -->
+            <p>Made in India</p>
+        </div>
+    </header>
+
+    <!-- Vertically Faded Text -->
+    <div class="vertical-text">
+        <span>Pinnacle Pumps</span>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Pinnacle Pumps. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleDropdown(event) {
+            const dropdown = event.currentTarget.nextElementSibling;
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</body>
+</html>
